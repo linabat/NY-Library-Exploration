@@ -1,0 +1,49 @@
+:root {
+    --text-width: 1000px;
+}
+
+section {
+    width: var(--text-width);
+    margin: auto;
+}
+.drop-down{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.author {
+    font-size: 25px;
+    color: rgba(99, 30, 30, 0.751);
+    text-align: center;
+}
+
+.chart-holder {
+    text-align: center;
+}
+
+.section-text {
+    width: var(--text-width);
+    margin: auto;
+    font-size: 16px;
+}
+
+/* svg {
+    border: 2px solid lightslategrey
+} */
+body{
+    background-color: aliceblue;
+    font-family: "Verdana";
+}
+h2{
+    font-weight:normal;
+}
+#county-info{
+    font-style: italic;
+    font-size: 18px;
+}

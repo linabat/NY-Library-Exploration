@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Final Project</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <section>
+      <h1 class="title">Explore the Top 3 Counties With Libraries in New York </h1>
+      <h2 class="author">By: Lina Battikha</h2>
+      <p class="intro-text">
+        This webpage was created to explore the different resources available the top three counties in New York
+        that have most number of libraries. In fact, at the time that this data was collected, Suffolk County had the most
+        number of libraries within any county in the United States. &#128218;	
+        <br>
+        <br>
+        The data was used throughout this project was gathered from the U.S. Census Bureau is the data collection agent for IMLS Public Libraries Survey.
+        This data is from 2014. Future goal would be to update this webpage to include more recent data collection regarding the counties' libraries and 
+        explore that changes that have occurred. 
+
+        <br>
+        <br>
+        You can explore the different counties by changing the library selection right below! The default library selection is SUFFOLK county. 
+
+      </p>
+    </section>
+
+     <!-- this is where to include drop down menu for county options  -->
+     <section>
+      <div id = "county-selection"></div> 
+      <div id = "county-info">
+      </div> 
+     </section>
+
+    <!-- chart 4 -->
+    <section>
+      <h1 class="section-title">Distribution of Libraries Within Their Counties</h1>
+      <p class="section-text">
+        The map below provides a visualization of the location of where the counties are on the 
+        map of New York as well as where each of the libraries are located. If you hover over any point,
+        you can learn information the library that includes the library's name, employee hours and number of librarians. 
+        <br>
+        <br>
+        The number of librarians is calculated based off of the number of librarians per 25,000 within the service area population.  
+        The number of Employee hours is the total number of hours of all the employees within a pay period (2 weeks). 
+      </p>
+    </section>
+    <section>
+      <h2>Suffolk Leading in Number of Libraries</h2>
+    </section>
+    <div class="chart-holder">
+        <div id="map-container">
+          <svg id="geoGraph-svg" width=1000 height=1000></svg>
+
+        </div>
+    </div>
+     
+
+    <!-- chart 1 -->
+    <section>
+      <h1 class="section-title">The Collections are Endless</h1>
+      <p class="section-text">
+        <!-- this text is going to correspond to bar chart 1 -->
+        Let's take a look at the collections each library has! The number of collections and the variablity 
+        within the types of the collections that are available can indicate the library's service population as
+        a larger population leads to more funding, so more money can be splurged onto different collections 	&#128513;. 
+
+        <br> 
+        <br> 
+        Explore the different libraries and the number of collections they have within each collection category by hovering
+        over any bar on the graph! 
+      </p>
+    </section>
+
+    <div class="chart-holder">
+        <!-- this is going to be the bar chart with sum of collection types and number of collections -->
+      <div id="bar-chart-1">
+        <svg id="bar-chart-svg" width=1000 height=1000></svg>
+      </div>
+    </div>
+    <!-- chart 2 -->
+    <section>
+      <h1 class="section-title">Who's Popular?</h1>
+      <p class="section-text">
+        Let's take a look at the distribution of the number of library visits and their registered users for each library within the selected county. 
+        Hover over any point to get some numbers! Regardless of the county you've chosen, as expected, there is a positive linear trend between number of 
+        visitors and registered users within the year &#128200;. 
+        
+        <br> 
+        <br>
+
+        Can you find the most popular library? &#128064;
+      </p>
+    </section>
+    <div class="chart-holder">
+        <div id="scatterplot">
+          <svg id="scatterplot-svg" width=1000 height=1000></svg>
+
+        </div>
+    </div>
+
+
+    <!-- chart 3 -->
+    <section>
+        <h1 class="section-title">It's All Connected</h1>
+        <p class="section-text">
+          Now let's take a closer look at resources that are shared between libraries within this county. The network diagram focuses on all the
+          connections that are made between libraries that also have Print Collections. So, if you ever need to find another library that has print collections 
+          within this counties, you are set. &#128376;	
+
+          <br>
+          <br>
+          Take a closer look! You can zoom into this diagram and over a line to see the link between the two libraries. Hover over nodes of the diagram to retrieve the library name.
+      </section>
+      <section>
+      <h2>Need a Print Collection? Explore this Network Diagram!</h2>
+      </section>
+      <div class="chart-holder">
+          <div id='node-links'>
+            <svg id="network-svg" width=1000 height=1000></svg>
+
+          </div>
+      </div>
+
+    <section>
+      <p class = "section-text">
+        You’ve completed your exploration of libraries with different counties in the state of New York! You’ve had a chance to look at different trends that were noticeable and possibly draw conclusions as to why these trends were present, whether because of county population or service population. Since this dataset is from 2014, the next step that would need to be done is to look at how these trends change over time and plot out the present trends of libraries in New York during the year of 2023. 
+      </p>
+    </section>
+
+   
+    <script src="script.js"></script>
+    <!-- <script src="graph.js"></script> -->
+  </body>
+</html>
